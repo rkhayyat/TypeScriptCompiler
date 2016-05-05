@@ -1,0 +1,20 @@
+{
+  "name": "typescriptAutocompilter",
+  "version": "1.0.0",
+  "description": "run task compile TypeScript file to javascript, concatinate and minify",
+  "dependencies": {
+    "superstatic": "^2.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.0.1",
+    "gulp-inject": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-tslint": "^1.4.4",
+    "gulp-typescript": "^2.5.0",
+    "gulp-uglify": "^1.5.3"
+  }
+}
