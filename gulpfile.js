@@ -48,16 +48,17 @@ gulp.task('compile-ts', function () {
                         .pipe(gulp.dest(config.jsPath));
 });
 
+/**
+ * Concatinate all the compiled Javascript files in 'compiled-bundle.js' 
+ * then minify it under the name 'compiled-bundle.min.js'.
+ */
 gulp.task('build-js', function() {
-  return gulp.src(config.allJavaScript)
+  return gulp.src(config.allJavaScript) //path to all javascript files
         .pipe(sourcemaps.init())
         .pipe(concat('compiled-bundle.js'))
         .pipe(gulp.dest(config.jsConcatPath))
         .pipe(rename("compiled-bundle.min.js"))
         .pipe(uglify())
-        
-      //only uglify if gulp is ran with '--type production'
-        .pipe(uglify() ) 
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.jsConcatPath));
 });
